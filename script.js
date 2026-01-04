@@ -1,15 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Typing Effect
-    const textElement = document.getElementById('typewriter');
-    const texts = ["Software Developer 💻", "TY B.Tech Student 🎓", "Tech Enthusiast 🚀"];
+    // Mobile Menu Toggle
+    const btn = document.querySelector('.hamburger-btn');
+    const menu = document.querySelector('.mobile-menu');
+
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+
+            // Toggle icon
+            const icon = btn.querySelector('span');
+            if (menu.classList.contains('flex')) {
+                icon.textContent = 'close';
+            } else {
+                icon.textContent = 'menu';
+            }
+        });
+
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                btn.querySelector('span').textContent = 'menu';
+            });
+        });
+    }
+
+    // Typing Effect Logic
+    const textElement = document.querySelector('.typewriter');
+    const texts = ["Software Developer", "TY B.Tech Student", "Tech Enthusiast"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typeSpeed = 100;
 
     function type() {
+        if (!textElement) return;
+
         const currentText = texts[textIndex];
-        
+
         if (isDeleting) {
             textElement.textContent = currentText.substring(0, charIndex - 1);
             charIndex--;
@@ -20,79 +50,39 @@ document.addEventListener('DOMContentLoaded', () => {
             typeSpeed = 100;
         }
 
+        // Adjust animation logic to match the cursor blink
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
             typeSpeed = 2000; // Pause at end
+            textElement.style.borderRight = '3px solid #0ea5e9'; // Keep cursor blinking
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
             typeSpeed = 500; // Pause before next word
+        } else {
+            // Ensure cursor is visible during typing
+            textElement.style.borderRight = '3px solid #0ea5e9';
         }
 
         setTimeout(type, typeSpeed);
     }
 
-    type();
+    // Start typing effect
+    if (textElement) type();
 
-    // Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = hamburger.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'rgba(15, 23, 42, 0.95)';
-            navLinks.style.padding = '2rem';
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            navLinks.style.display = ''; // Reset to css default
-            navLinks.removeAttribute('style');
-        }
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                hamburger.querySelector('i').classList.remove('fa-times');
-                hamburger.querySelector('i').classList.add('fa-bars');
-                navLinks.removeAttribute('style');
-            }
-        });
-    });
-
-    // Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.1
-    };
-
+    // Scroll Reveal (Optional enhancement for the new design)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Select elements to animate
-    const animatedElements = document.querySelectorAll('.about-card, .skill-item, .project-card, .section-title');
-    
+    const animatedElements = document.querySelectorAll('.glass-card, .project-card, .section-title');
     animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
         observer.observe(el);
     });
 });
