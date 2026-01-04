@@ -5,12 +5,9 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Naren Dey - Personal Portfolio</title>
-    <meta name="description" content="Portfolio of Naren Dey, a Third Year B.Tech Student and Software Developer.">
-
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -26,144 +23,33 @@
                     colors: {
                         "primary": "#0ea5e9", // Sky-500
                         "primary-dark": "#0284c7", // Sky-600
-                        "background-light": "#f0f9ff", // Sky-50
-                        "background-accent": "#e0f2fe", // Sky-100
-                        "text-main": "#0f172a", // Slate-900
-                        "text-muted": "#475569", // Slate-600
+                        "secondary": "#06b6d4", // Cyan-500
+                        "background-light": "#eef8ff",
+                        "background-dark": "#0f172a",
                         "glass-border": "rgba(255, 255, 255, 0.6)",
-                        "glass-bg": "rgba(255, 255, 255, 0.45)",
-                        "glass-surface": "rgba(255, 255, 255, 0.7)",
+                        "glass-surface": "rgba(255, 255, 255, 0.5)",
                     },
                     fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"]
+                        "display": ["Space Grotesk", "sans-serif"]
                     },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
-                    backdropBlur: {
-                        'xs': '2px',
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
                     },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                    }
                 },
             },
         }
     </script>
     <style>
-        .glass-panel,
-        .glass-card,
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 8px 32px rgba(14, 165, 233, 0.1);
-        }
-
-        .glass-button {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            z-index: 0;
-            animation: float 10s infinite ease-in-out;
-        }
-
-        .glow-blob {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: #0ea5e9;
-            filter: blur(100px);
-            opacity: 0.15;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
-        }
-
-        .blob-animate {
-            animation: float 10s infinite ease-in-out;
-        }
-
-        .blob-animate-delayed {
-            animation: float 12s infinite ease-in-out reverse;
-        }
-
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            border-right: 3px solid #0ea5e9;
-            white-space: nowrap;
-            margin: 0;
-            letter-spacing: 0.05em;
-            animation: typing 3.5s steps(30, end) infinite alternate, blink-caret .75s step-end infinite;
-            max-width: fit-content;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: #0ea5e9;
-            }
-        }
-
-        .text-gradient {
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-        }
-
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
-
         ::-webkit-scrollbar {
             width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #f0f9ff;
+            background: #eef8ff;
         }
 
         ::-webkit-scrollbar-thumb {
@@ -178,187 +64,190 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
     </style>
 </head>
 
 <body
-    class="bg-background-light text-text-main font-display overflow-x-hidden selection:bg-primary selection:text-white">
+    class="bg-background-light font-display text-slate-800 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
-    <!-- Background Elements -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div
-            class="blob bg-sky-200 w-[600px] h-[600px] top-[-10%] left-[-10%] mix-blend-multiply filter blur-3xl opacity-40">
+    <!-- Background Gradients -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px]">
         </div>
-        <div class="blob bg-blue-200 w-[500px] h-[500px] bottom-[-10%] right-[-5%] mix-blend-multiply filter blur-3xl opacity-40"
-            style="animation-delay: 2s"></div>
-        <div class="blob bg-cyan-200 w-[400px] h-[400px] top-[40%] right-[30%] mix-blend-multiply filter blur-3xl opacity-30"
-            style="animation-delay: 4s"></div>
+        <div class="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-sky-300/20 rounded-full blur-[80px]"></div>
     </div>
 
-    <div class="relative flex min-h-screen w-full flex-col z-10">
+    <div class="relative z-10 flex min-h-screen flex-col">
 
         <!-- Header -->
-        <header
-            class="w-full px-5 py-4 lg:px-20 border-b border-white/60 bg-white/50 backdrop-blur-md sticky top-0 z-50">
-            <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <header class="w-full border-b border-white/40 bg-white/40 backdrop-blur-md sticky top-0 z-50">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="text-primary p-1 bg-sky-50 rounded-lg">
-                        <span class="material-symbols-outlined text-4xl">code_blocks</span>
+                    <div
+                        class="size-8 text-primary flex items-center justify-center bg-primary/10 rounded-lg border border-primary/10">
+                        <span class="material-symbols-outlined text-2xl">code_blocks</span>
                     </div>
-                    <h2 class="text-slate-800 text-xl font-bold tracking-tight">N.Dey</h2>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-800">N.Dey</h2>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         href="#home">Home</a>
-                    <a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         href="#skills">Skills</a>
-                    <a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors"
-                        href="#projects">Work</a>
-                    <a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#projects">Projects</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         href="#contact">Contact</a>
                 </nav>
-                <div class="hidden md:block">
-                    <a href="#contact"
-                        class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-md shadow-sky-200">
-                        Let's Talk
-                    </a>
-                </div>
-                <!-- Mobile Menu Button -->
+                <a href="#contact"
+                    class="hidden md:flex bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2 px-5 rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30">
+                    Let's Talk
+                </a>
                 <button class="md:hidden text-slate-800 hamburger-btn">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
             <!-- Mobile Menu -->
             <div
-                class="mobile-menu hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md border-b border-white/60 p-5 md:hidden flex-col gap-4 shadow-lg">
+                class="mobile-menu hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-white/60 p-5 md:hidden flex-col gap-4 shadow-xl z-50">
                 <a class="text-slate-600 hover:text-primary font-medium" href="#home">Home</a>
                 <a class="text-slate-600 hover:text-primary font-medium" href="#skills">Skills</a>
-                <a class="text-slate-600 hover:text-primary font-medium" href="#projects">Work</a>
+                <a class="text-slate-600 hover:text-primary font-medium" href="#projects">Projects</a>
                 <a class="text-slate-600 hover:text-primary font-medium" href="#contact">Contact</a>
             </div>
         </header>
 
-        <main class="flex-grow flex flex-col">
+        <main class="flex-grow flex flex-col items-center justify-center">
 
-            <!-- Hero Section -->
-            <section id="home" class="w-full px-5 py-12 lg:px-20 lg:py-24 flex items-center min-h-[90vh]">
-                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div class="flex flex-col gap-6 text-left z-10">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-white/80 shadow-sm w-fit">
-                            <span class="material-symbols-outlined text-primary text-sm animate-wave">waving_hand</span>
-                            <span class="text-slate-700 text-xs font-bold uppercase tracking-wider">Hello, I'm
-                                Naren</span>
-                        </div>
-                        <h1
-                            class="text-slate-900 text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                            Building digital <br class="hidden lg:block" />
-                            <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">experiences</span>
-                            that matter.
-                        </h1>
-                        <div class="flex items-center gap-2 text-lg md:text-xl text-slate-600 h-8">
-                            <span class="font-medium">I am a</span>
-                            <div class="typewriter text-primary font-bold">
-                                Software Developer
-                            </div>
-                        </div>
-                        <p class="text-slate-500 max-w-lg text-base md:text-lg leading-relaxed font-body">
-                            Third Year B.Tech Student specializing in crafting high-performance websites and
-                            applications with a focus on motion, interaction, and user experience.
-                        </p>
-                        <div class="flex flex-wrap gap-4 mt-4">
-                            <a href="#projects"
-                                class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-sky-300/50 transition-all hover:-translate-y-1">
-                                View Projects
-                            </a>
-                            <a href="#contact"
-                                class="glass-button flex items-center justify-center rounded-lg h-12 px-8 text-slate-700 hover:text-primary hover:bg-white text-base font-bold transition-all hover:-translate-y-1">
-                                Contact Me
-                            </a>
-                        </div>
-                        <div class="flex gap-6 mt-8">
-                            <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
-                                href="https://github.com/narrren" target="_blank">
-                                <span class="material-symbols-outlined">code</span>
-                            </a>
-                            <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
-                                href="https://www.linkedin.com/in/narendey/" target="_blank">
-                                <span class="material-symbols-outlined">work</span>
-                            </a>
-                            <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
-                                href="mailto:naren.deyanilkumar@gmail.com">
-                                <span class="material-symbols-outlined">mail</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Hero Visual -->
-                    <div
-                        class="relative w-full h-full min-h-[400px] flex items-center justify-center lg:justify-end z-10">
-                        <div
-                            class="absolute inset-0 flex items-center justify-center lg:justify-end pointer-events-none">
+            <!-- Hero / About Section -->
+            <section id="home" class="w-full px-4 md:px-8 py-12 md:py-20 flex flex-col items-center">
+                <div class="w-full max-w-[1200px] flex flex-col gap-12">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
+                        <div class="md:col-span-7 lg:col-span-8 flex flex-col justify-center gap-6 p-2">
                             <div
-                                class="w-4/5 h-4/5 bg-gradient-to-tr from-sky-200 to-cyan-200 rounded-full blur-3xl absolute top-10 right-10 animate-pulse opacity-60">
+                                class="inline-flex items-center gap-2 self-start rounded-full bg-white/60 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary border border-primary/20 backdrop-blur-sm shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                About Me
                             </div>
-                            <!-- Replaced generic image with a tech/code abstract visual or placeholder -->
-                            <div
-                                class="w-[85%] h-auto rounded-2xl shadow-2xl opacity-90 glass-panel p-6 bg-white/30 flex items-center justify-center aspect-square">
-                                <span class="material-symbols-outlined text-[120px] text-primary/80">terminal</span>
+                            <h1
+                                class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+                                Crafting digital <br />
+                                <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">experiences</span>
+                                that matter.
+                            </h1>
+                            <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+                                I'm Naren, a creative developer specializing in bridging the gap between design and
+                                technology. I build accessible, performant, and beautiful web applications.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <a href="#projects"
+                                    class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-base font-bold py-3 px-6 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group">
+                                    <span>View Projects</span>
+                                    <span
+                                        class="material-symbols-outlined text-sm group-hover:translate-y-1 transition-transform">arrow_downward</span>
+                                </a>
+                                <a href="#contact"
+                                    class="flex items-center gap-2 bg-white/50 border border-white/60 hover:bg-white text-slate-800 text-base font-bold py-3 px-6 rounded-xl transition-all backdrop-blur-sm shadow-sm hover:shadow-md">
+                                    <span>Contact Me</span>
+                                </a>
                             </div>
                         </div>
-                        <div
-                            class="glass-panel w-full max-w-md p-8 rounded-2xl relative overflow-hidden transform transition-transform hover:scale-[1.02] duration-300">
+                        <div class="md:col-span-5 lg:col-span-4 h-full min-h-[300px] md:min-h-[400px]">
                             <div
-                                class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/40 to-transparent pointer-events-none">
-                            </div>
-                            <div class="flex items-center justify-between mb-8 relative z-10">
-                                <div>
-                                    <h3 class="text-slate-800 text-xl font-bold">Current Status</h3>
-                                    <p class="text-slate-500 text-sm font-medium">Open to work</p>
+                                class="relative w-full h-full rounded-2xl overflow-hidden border border-white/50 bg-white shadow-2xl shadow-sky-900/5 ring-1 ring-black/5 flex items-center justify-center">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent z-10">
                                 </div>
-                                <div class="relative">
-                                    <div
-                                        class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)]">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 w-3 h-3 rounded-full bg-green-500 animate-ping opacity-75">
-                                    </div>
+                                <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                                    <!-- Placeholder for user image -->
+                                    <span class="material-symbols-outlined text-9xl text-slate-300">terminal</span>
                                 </div>
-                            </div>
-                            <div class="space-y-6 relative z-10">
-                                <div class="flex items-center gap-4 group">
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
-                                        <span class="material-symbols-outlined">schedule</span>
-                                    </div>
-                                    <div>
-                                        <p class="text-2xl font-bold text-slate-800 leading-none">3+</p>
-                                        <p class="text-sm text-slate-500 font-medium">Years Coding</p>
-                                    </div>
-                                </div>
-                                <div class="h-px w-full bg-slate-200"></div>
-                                <div class="flex items-center gap-4 group">
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300 shadow-sm">
-                                        <span class="material-symbols-outlined">rocket_launch</span>
-                                    </div>
-                                    <div>
-                                        <p class="text-2xl font-bold text-slate-800 leading-none">10+</p>
-                                        <p class="text-sm text-slate-500 font-medium">Projects Built</p>
+                                <div
+                                    class="absolute bottom-4 left-4 z-20 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-2 rounded-lg shadow-lg">
+                                    <p class="text-xs text-white/90 font-medium uppercase tracking-wide">Location</p>
+                                    <div class="flex items-center gap-1 text-white font-bold text-sm">
+                                        <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                        Mumbai, India
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-8 pt-6 border-t border-slate-200 relative z-10">
-                                <div class="flex items-center justify-between text-xs text-slate-500 font-medium">
-                                    <span>Latest stack:</span>
-                                    <div class="flex gap-2">
-                                        <span
-                                            class="px-2 py-1 rounded bg-white border border-slate-200 shadow-sm text-slate-600">React</span>
-                                        <span
-                                            class="px-2 py-1 rounded bg-white border border-slate-200 shadow-sm text-slate-600">Tailwind</span>
-                                        <span
-                                            class="px-2 py-1 rounded bg-white border border-slate-200 shadow-sm text-slate-600">Node</span>
+                        </div>
+                        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                            <div
+                                class="group relative overflow-hidden rounded-2xl border border-white/60 bg-white/40 p-6 backdrop-blur-md transition-all hover:bg-white/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100">
+                                <div
+                                    class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl group-hover:bg-primary/20 transition-all">
+                                </div>
+                                <div
+                                    class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300 ring-1 ring-primary/20">
+                                    <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                                </div>
+                                <h3 class="mb-2 text-xl font-bold text-slate-800">Innovator</h3>
+                                <p class="text-sm leading-relaxed text-slate-600">
+                                    Thinking outside the box to solve complex user problems with creative, scalable
+                                    solutions.
+                                </p>
+                            </div>
+                            <div
+                                class="group relative overflow-hidden rounded-2xl border border-white/60 bg-white/40 p-6 backdrop-blur-md transition-all hover:bg-white/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100">
+                                <div
+                                    class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-secondary/10 blur-2xl group-hover:bg-secondary/20 transition-all">
+                                </div>
+                                <div
+                                    class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary group-hover:scale-110 transition-transform duration-300 ring-1 ring-secondary/20">
+                                    <span class="material-symbols-outlined text-3xl">school</span>
+                                </div>
+                                <h3 class="mb-2 text-xl font-bold text-slate-800">Lifelong Learner</h3>
+                                <p class="text-sm leading-relaxed text-slate-600">
+                                    Constantly pursuing new knowledge, currently focusing on Advanced React Patterns.
+                                </p>
+                            </div>
+                            <div
+                                class="group relative overflow-hidden rounded-2xl border border-white/60 bg-white/40 p-6 backdrop-blur-md transition-all hover:bg-white/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100">
+                                <div
+                                    class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-sky-300/20 blur-2xl group-hover:bg-sky-400/20 transition-all">
+                                </div>
+                                <div
+                                    class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-600 group-hover:scale-110 transition-transform duration-300 ring-1 ring-sky-200">
+                                    <span class="material-symbols-outlined text-3xl">memory</span>
+                                </div>
+                                <h3 class="mb-2 text-xl font-bold text-slate-800">Tech Enthusiast</h3>
+                                <p class="text-sm leading-relaxed text-slate-600">
+                                    Obsessed with the intersection of hardware and software, keeping up with AI
+                                    advancements.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full border-t border-slate-200/60 pt-8 mt-4">
+                            <div class="flex flex-wrap justify-between gap-8 text-center md:text-left">
+                                <div class="flex-1 min-w-[150px]">
+                                    <div class="text-3xl font-bold text-slate-800 mb-1">3+</div>
+                                    <div class="text-sm text-slate-500 uppercase tracking-wider font-medium">Years
+                                        Experience</div>
+                                </div>
+                                <div class="flex-1 min-w-[150px]">
+                                    <div class="text-3xl font-bold text-slate-800 mb-1">10+</div>
+                                    <div class="text-sm text-slate-500 uppercase tracking-wider font-medium">Projects
+                                        Built</div>
+                                </div>
+                                <div class="flex-1 min-w-[150px]">
+                                    <div class="text-3xl font-bold text-slate-800 mb-1">100%</div>
+                                    <div class="text-sm text-slate-500 uppercase tracking-wider font-medium">Commitment
                                     </div>
+                                </div>
+                                <div class="flex-1 min-w-[150px]">
+                                    <div class="text-3xl font-bold text-slate-800 mb-1">24/7</div>
+                                    <div class="text-sm text-slate-500 uppercase tracking-wider font-medium">Learning
+                                        Mode</div>
                                 </div>
                             </div>
                         </div>
@@ -371,25 +260,21 @@
                 <div class="max-w-7xl mx-auto flex flex-col items-center">
                     <div class="flex flex-col items-center text-center mb-16 space-y-4">
                         <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-sky-100 shadow-sm mb-2">
-                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-secondary/20 shadow-sm mb-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tech
                                 Stack</span>
                         </div>
-                        <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900">
+                        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
                             Skills & <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-indigo-500 text-gradient">Technologies</span>
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Technologies</span>
                         </h2>
-                        <p class="text-slate-600 text-lg max-w-2xl font-body leading-relaxed">
-                            A curated ecosystem of the tools, languages, and frameworks I use to engineer robust,
-                            scalable, and beautiful digital experiences.
-                        </p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                         <!-- Frontend -->
                         <div
-                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1">
+                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1 bg-white/40">
                             <div class="flex items-center gap-4 border-b border-sky-100 pb-4">
                                 <div
                                     class="p-3 rounded-xl bg-sky-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
@@ -433,7 +318,7 @@
 
                         <!-- Backend -->
                         <div
-                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1">
+                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1 bg-white/40">
                             <div class="flex items-center gap-4 border-b border-sky-100 pb-4">
                                 <div
                                     class="p-3 rounded-xl bg-sky-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
@@ -467,17 +352,12 @@
                                         class="w-10 h-10 hover:scale-110 transition-transform" />
                                     <span class="text-xs text-slate-500 font-semibold">MongoDB</span>
                                 </div>
-                                <div class="flex flex-col items-center gap-3">
-                                    <img src="https://skillicons.dev/icons?i=express"
-                                        class="w-10 h-10 hover:scale-110 transition-transform" />
-                                    <span class="text-xs text-slate-500 font-semibold">Express</span>
-                                </div>
                             </div>
                         </div>
 
                         <!-- Tools -->
                         <div
-                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1">
+                            class="glass-card flex flex-col gap-6 rounded-2xl p-6 md:p-8 transition-all duration-300 group hover:-translate-y-1 bg-white/40">
                             <div class="flex items-center gap-4 border-b border-sky-100 pb-4">
                                 <div
                                     class="p-3 rounded-xl bg-sky-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
@@ -522,8 +402,9 @@
                 </div>
             </section>
 
+
             <!-- Projects Section -->
-            <section id="projects" class="w-full px-5 py-12 lg:px-20 lg:py-24 bg-white/40">
+            <section id="projects" class="w-full px-5 py-12 lg:px-20 lg:py-24">
                 <div class="max-w-7xl mx-auto">
                     <div class="mb-16 md:mb-24 relative">
                         <div class="flex flex-col gap-4 max-w-2xl">
@@ -532,9 +413,9 @@
                                 <span class="w-8 h-[1px] bg-primary"></span>
                                 <span>Portfolio</span>
                             </div>
-                            <h2 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+                            <h2 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-slate-900">
                                 Selected <span
-                                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Projects</span>
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Projects</span>
                             </h2>
                             <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
                                 A curated collection of web applications and experiments.
@@ -636,130 +517,36 @@
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="flex items-center justify-center p-4 py-12 sm:py-20 relative z-10">
-                <div class="w-full max-w-2xl relative group">
-                    <div
-                        class="relative overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-b from-white/60 to-sky-50/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(14,165,233,0.1)]">
-                        <div class="p-8 sm:p-12 flex flex-col items-center text-center">
-                            <div class="mb-2">
-                                <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100/80 border border-sky-200 text-primary text-xs font-bold tracking-wider uppercase mb-6">
-                                    <span class="relative flex h-2 w-2">
-                                        <span
-                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                                    </span>
-                                    Available for work
-                                </span>
-                                <h2 class="text-slate-900 text-4xl sm:text-5xl font-bold tracking-tight mb-4">Let's
-                                    Connect</h2>
-                                <p class="text-slate-600 text-lg max-w-lg mx-auto leading-relaxed">
-                                    Creating digital experiences that matter. I'm always open to discussing
-                                    opportunities.
-                                </p>
+            <!-- Contact/Footer Section -->
+            <footer class="w-full border-t border-white/40 bg-white/40 backdrop-blur-sm" id="contact">
+                <div
+                    class="max-w-[1200px] mx-auto px-8 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex flex-col gap-2 text-center md:text-left">
+                        <span class="text-lg font-bold text-slate-800">Naren Dey</span>
+                        <p class="text-slate-500 text-sm font-medium">© 2026 Personal Portfolio.</p>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="https://github.com/narrren" target="_blank">
+                            <span class="material-symbols-outlined">code</span>
+                        </a>
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="https://www.linkedin.com/in/narendey/" target="_blank">
+                            <div class="flex items-center justify-center size-6">
+                                <i class="fab fa-linkedin-in text-lg"></i>
                             </div>
-                            <div class="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div
-                                    class="sm:col-span-2 group/card relative p-1 rounded-xl bg-gradient-to-b from-sky-100/50 to-transparent">
-                                    <div
-                                        class="h-full w-full rounded-lg bg-glass-surface border border-white/50 p-5 flex flex-col items-center justify-center gap-4 transition-all hover:border-primary/30 group-hover/card:shadow-[0_4px_20px_-2px_rgba(14,165,233,0.1)]">
-                                        <div class="p-3 rounded-full bg-sky-50 text-primary mb-1">
-                                            <span class="material-symbols-outlined text-3xl">mail</span>
-                                        </div>
-                                        <div class="text-center">
-                                            <h3
-                                                class="text-sm font-medium text-slate-500 uppercase tracking-widest mb-1">
-                                                Email Me</h3>
-                                            <a class="text-xl sm:text-2xl font-bold text-slate-900 hover:text-primary transition-colors"
-                                                href="mailto:naren.deyanilkumar@gmail.com">naren.deyanilkumar@gmail.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="group/social relative p-1 rounded-xl bg-gradient-to-b from-sky-100/50 to-transparent hover:scale-[1.02] transition-transform duration-300"
-                                    href="https://www.linkedin.com/in/narendey/" target="_blank">
-                                    <div
-                                        class="h-full w-full rounded-lg bg-glass-surface border border-white/50 p-4 flex items-center gap-4 transition-colors group-hover/social:border-blue-300/50 group-hover/social:bg-white/80">
-                                        <div
-                                            class="flex items-center justify-center size-12 rounded-lg bg-blue-50 text-[#0077b5]">
-                                            <i class="fab fa-linkedin-in text-2xl"></i>
-                                        </div>
-                                        <div class="flex flex-col text-left">
-                                            <span class="text-xs font-medium text-slate-500">Professional</span>
-                                            <span class="text-lg font-bold text-slate-900">LinkedIn</span>
-                                        </div>
-                                        <span
-                                            class="material-symbols-outlined ml-auto text-slate-400 group-hover/social:text-[#0077b5] group-hover/social:translate-x-1 transition-all">arrow_outward</span>
-                                    </div>
-                                </a>
-                                <a class="group/social relative p-1 rounded-xl bg-gradient-to-b from-sky-100/50 to-transparent hover:scale-[1.02] transition-transform duration-300"
-                                    href="https://github.com/narrren" target="_blank">
-                                    <div
-                                        class="h-full w-full rounded-lg bg-glass-surface border border-white/50 p-4 flex items-center gap-4 transition-colors group-hover/social:border-slate-400/50 group-hover/social:bg-white/80">
-                                        <div
-                                            class="flex items-center justify-center size-12 rounded-lg bg-slate-50 text-slate-800">
-                                            <i class="fab fa-github text-2xl"></i>
-                                        </div>
-                                        <div class="flex flex-col text-left">
-                                            <span class="text-xs font-medium text-slate-500">Code</span>
-                                            <span class="text-lg font-bold text-slate-900">GitHub</span>
-                                        </div>
-                                        <span
-                                            class="material-symbols-outlined ml-auto text-slate-400 group-hover/social:text-slate-800 group-hover/social:translate-x-1 transition-all">arrow_outward</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                class="mt-12 w-full pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <div class="flex items-center gap-2">
-                                    <img src="https://komarev.com/ghpvc/?username=narrren&label=Profile%20Views&color=blueviolet&style=flat-square"
-                                        alt="narrren profile views" />
-                                </div>
-                            </div>
-                        </div>
+                        </a>
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="mailto:naren.deyanilkumar@gmail.com">
+                            <span class="material-symbols-outlined">mail</span>
+                        </a>
                     </div>
                 </div>
-            </section>
+            </footer>
         </main>
-
-        <!-- Footer -->
-        <footer class="w-full border-t border-sky-100 bg-white/40 backdrop-blur-sm py-6">
-            <div class="max-w-7xl mx-auto px-6 text-center">
-                <p class="text-sm text-slate-500">
-                    © 2026 Naren Dey. Built with Glassmorphism & Tailwind. <br>
-                    Hobbies: Coding 👨‍💻, Cycling 🚲, and Watching Tech Talks 📺
-                </p>
-            </div>
-        </footer>
     </div>
 
-    <!-- Script for Mobile Menu -->
-    <script>
-        const btn = document.querySelector('.hamburger-btn');
-        const menu = document.querySelector('.mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        });
-
-        // Typewriter effect logic
-        const texts = ["Software Developer", "Student", "Tech Enthusiast"];
-        const textElement = document.querySelector('.typewriter');
-        // Simple CSS animation handles the blinking, but text changing needs JS
-        let textIndex = 0;
-
-        // Re-implementing dynamic text change with new structure if needed,
-        // but the CSS class `typewriter` from the user snippet only animates width.
-        // To actually change text content like before, we need JS.
-
-        function typeWriter() {
-            // This logic was in previous script.js, let's keep it defined here or in external script
-            // For now, static text "Software Developer" is in HTML.
-            // If we want it to cycle, we need the JS from before adapted.
-        }
-
-    </script>
     <script src="script.js"></script>
 </body>
 
