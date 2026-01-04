@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Toggle icon
             const icon = btn.querySelector('span');
-            if (menu.classList.contains('flex')) {
-                icon.textContent = 'close';
-            } else {
-                icon.textContent = 'menu';
+            if (icon) {
+                if (menu.classList.contains('flex')) {
+                    icon.textContent = 'close';
+                } else {
+                    icon.textContent = 'menu';
+                }
             }
         });
 
@@ -22,13 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                btn.querySelector('span').textContent = 'menu';
+                const icon = btn.querySelector('span');
+                if (icon) icon.textContent = 'menu';
             });
         });
     }
 
     // Typing Effect Logic
     const textElement = document.querySelector('.typewriter');
+    // Disable CSS animation if present so JS can take over
+    if (textElement) {
+        textElement.style.animation = 'none';
+        textElement.style.width = 'auto';
+        textElement.style.borderRight = '3px solid #0ea5e9'; // retain cursor
+    }
+
     const texts = ["Software Developer", "TY B.Tech Student", "Tech Enthusiast"];
     let textIndex = 0;
     let charIndex = 0;
@@ -50,27 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
             typeSpeed = 100;
         }
 
-        // Adjust animation logic to match the cursor blink
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
-            typeSpeed = 2000; // Pause at end
-            textElement.style.borderRight = '3px solid #0ea5e9'; // Keep cursor blinking
+            typeSpeed = 2000;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
-            typeSpeed = 500; // Pause before next word
-        } else {
-            // Ensure cursor is visible during typing
-            textElement.style.borderRight = '3px solid #0ea5e9';
+            typeSpeed = 500;
         }
 
         setTimeout(type, typeSpeed);
     }
 
-    // Start typing effect
     if (textElement) type();
 
-    // Scroll Reveal (Optional enhancement for the new design)
+    // Scroll Reveal
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    const animatedElements = document.querySelectorAll('.glass-card, .project-card, .section-title');
+    const animatedElements = document.querySelectorAll('.glass-card, .glass-panel, .section-title');
     animatedElements.forEach(el => {
         el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
         observer.observe(el);
